@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @operador.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @operador.password %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @operador.dni %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @operador.login %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @operador.estado %>
+</p>
+
+
+<%= link_to 'Edit', edit_operador_path(@operador) %> |
+<%= link_to 'Back', operadors_path %>

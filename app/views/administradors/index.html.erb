@@ -1,0 +1,33 @@
+<h1>Listing administradors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Dni</th>
+    <th>Login</th>
+    <th>Estado</th>
+    <th>Encrypted password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @administradors.each do |administrador| %>
+  <tr>
+    <td><%= administrador.name %></td>
+    <td><%= administrador.password %></td>
+    <td><%= administrador.dni %></td>
+    <td><%= administrador.login %></td>
+    <td><%= administrador.estado %></td>
+    <td><%= administrador.encrypted_password %></td>
+    <td><%= link_to 'Show', administrador %></td>
+    <td><%= link_to 'Edit', edit_administrador_path(administrador) %></td>
+    <td><%= link_to 'Destroy', administrador, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Administrador', new_administrador_path %>

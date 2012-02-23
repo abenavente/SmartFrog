@@ -1,0 +1,31 @@
+<h1>Listing operadors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Dni</th>
+    <th>Login</th>
+    <th>Estado</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @operadors.each do |operador| %>
+  <tr>
+    <td><%= operador.name %></td>
+    <td><%= operador.password %></td>
+    <td><%= operador.dni %></td>
+    <td><%= operador.login %></td>
+    <td><%= operador.estado %></td>
+    <td><%= link_to 'Show', operador %></td>
+    <td><%= link_to 'Edit', edit_operador_path(operador) %></td>
+    <td><%= link_to 'Destroy', operador, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Operador', new_operador_path %>

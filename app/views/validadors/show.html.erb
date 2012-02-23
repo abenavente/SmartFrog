@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @validador.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @validador.password %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @validador.dni %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @validador.login %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @validador.estado %>
+</p>
+
+<p>
+  <b>Encrypted password:</b>
+  <%= @validador.encrypted_password %>
+</p>
+
+
+<%= link_to 'Edit', edit_validador_path(@validador) %> |
+<%= link_to 'Back', validadors_path %>

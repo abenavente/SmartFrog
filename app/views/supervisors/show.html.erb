@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @supervisor.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @supervisor.password %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @supervisor.dni %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @supervisor.login %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @supervisor.estado %>
+</p>
+
+<p>
+  <b>Encrypted password:</b>
+  <%= @supervisor.encrypted_password %>
+</p>
+
+
+<%= link_to 'Edit', edit_supervisor_path(@supervisor) %> |
+<%= link_to 'Back', supervisors_path %>

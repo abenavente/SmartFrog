@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartFrog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+<div id="container">
+
+  	  <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+      <%- end -%>
+
+      <p><%= link_to 'Home', root_path %></p>
+
+      <% if administrador_signed_in? -%>
+        <div id="administrador_login_box" style="float:right">
+          <%= current_administrador.email %> |
+          <%= link_to 'Salir', destroy_administrador_session_path, :method => :delete %>
+        </div>
+      <% end -%>
+      <% if supervisor_signed_in? -%>
+        <div id="supervisor_login_box" style="float:left">
+          <%= current_supervisor.email %> |
+          <%= link_to 'Salir', destroy_supervisor_session_path, :method => :delete %>
+        </div>
+      <% end -%>
+      <% if operador_signed_in? -%>
+        <div id="operador_login_box" style="float:left">
+          <%= current_operador.email %> |
+          <%= link_to 'Salir', destroy_operador_session_path, :method => :delete %>
+        </div>
+      <% end -%>
+        <% if validador_signed_in? -%>
+        <div id="validador_login_box" style="float:left">
+          <%= current_validador.email %> |
+          <%= link_to 'Salir', destroy_validador_session_path, :method => :delete %>
+        </div>
+      <% end -%>
+      <div style="clear:both"></div>
+
+      
+
+
+<%= yield %>
+
+
+</body>
+</html>

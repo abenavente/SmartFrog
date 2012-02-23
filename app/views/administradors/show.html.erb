@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @administrador.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @administrador.password %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @administrador.dni %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%= @administrador.login %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @administrador.estado %>
+</p>
+
+<p>
+  <b>Encrypted password:</b>
+  <%= @administrador.encrypted_password %>
+</p>
+
+
+<%= link_to 'Edit', edit_administrador_path(@administrador) %> |
+<%= link_to 'Back', administradors_path %>

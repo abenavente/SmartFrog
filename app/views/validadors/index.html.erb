@@ -1,0 +1,33 @@
+<h1>Listing validadors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Dni</th>
+    <th>Login</th>
+    <th>Estado</th>
+    <th>Encrypted password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @validadors.each do |validador| %>
+  <tr>
+    <td><%= validador.name %></td>
+    <td><%= validador.password %></td>
+    <td><%= validador.dni %></td>
+    <td><%= validador.login %></td>
+    <td><%= validador.estado %></td>
+    <td><%= validador.encrypted_password %></td>
+    <td><%= link_to 'Show', validador %></td>
+    <td><%= link_to 'Edit', edit_validador_path(validador) %></td>
+    <td><%= link_to 'Destroy', validador, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Validador', new_validador_path %>
