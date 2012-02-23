@@ -1,6 +1,10 @@
 SmartFrog::Application.routes.draw do
   
 root :to => "vistasGenerales#index"
+match "panelAdministrador" => "administradors#panel"
+match "panelSupervisor" => "supervisors#panel"
+match "panelOperador" => "operadors#panel"
+match "panelValidador" => "validadors#panel"
 
   devise_for :users
   devise_for :administradors
