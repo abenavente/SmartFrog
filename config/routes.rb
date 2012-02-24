@@ -1,5 +1,11 @@
 SmartFrog::Application.routes.draw do
   
+  resources :abonados
+
+  resources :posts
+
+  resources :carteras
+
   resources :campaings
 
   resources :services

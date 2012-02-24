@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @cartera.name %>
+</p>
+
+<p>
+  <b>Campaing:</b>
+  <%= @cartera.campaing %>
+</p>
+
+<p>
+  <b>Registros:</b>
+  <%= @cartera.registros %>
+</p>
+
+<p>
+  <b>Fecha carga:</b>
+  <%= @cartera.fecha_carga %>
+</p>
+
+
+<%= link_to 'Edit', edit_cartera_path(@cartera) %> |
+<%= link_to 'Back', carteras_path %>

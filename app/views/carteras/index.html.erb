@@ -1,0 +1,29 @@
+<h1>Listing carteras</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Campaing</th>
+    <th>Registros</th>
+    <th>Fecha carga</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @carteras.each do |cartera| %>
+  <tr>
+    <td><%= cartera.name %></td>
+    <td><%= cartera.campaing %></td>
+    <td><%= cartera.registros %></td>
+    <td><%= cartera.fecha_carga %></td>
+    <td><%= link_to 'Show', cartera %></td>
+    <td><%= link_to 'Edit', edit_cartera_path(cartera) %></td>
+    <td><%= link_to 'Destroy', cartera, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cartera', new_cartera_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@abonado) do |f| %>
+  <% if @abonado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abonado.errors.count, "error") %> prohibited this abonado from being saved:</h2>
+
+      <ul>
+      <% @abonado.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :identificador %><br />
+    <%= f.text_field :identificador %>
+  </div>
+  <div class="field">
+    <%= f.label :cartera %><br />
+    <%= f.text_field :cartera %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br />
+    <%= f.text_field :references %>
+  </div>
+  <div class="field">
+    <%= f.label :campaing %><br />
+    <%= f.text_field :campaing %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

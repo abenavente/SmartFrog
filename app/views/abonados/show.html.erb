@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Identificador:</b>
+  <%= @abonado.identificador %>
+</p>
+
+<p>
+  <b>Cartera:</b>
+  <%= @abonado.cartera %>
+</p>
+
+<p>
+  <b>References:</b>
+  <%= @abonado.references %>
+</p>
+
+<p>
+  <b>Campaing:</b>
+  <%= @abonado.campaing %>
+</p>
+
+
+<%= link_to 'Edit', edit_abonado_path(@abonado) %> |
+<%= link_to 'Back', abonados_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  identificador: MyString
+  cartera: MyString
+  references: MyString
+  campaing: 
+
+two:
+  identificador: MyString
+  cartera: MyString
+  references: MyString
+  campaing: 

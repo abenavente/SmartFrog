@@ -1,0 +1,29 @@
+<h1>Listing abonados</h1>
+
+<table>
+  <tr>
+    <th>Identificador</th>
+    <th>Cartera</th>
+    <th>References</th>
+    <th>Campaing</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @abonados.each do |abonado| %>
+  <tr>
+    <td><%= abonado.identificador %></td>
+    <td><%= abonado.cartera %></td>
+    <td><%= abonado.references %></td>
+    <td><%= abonado.campaing %></td>
+    <td><%= link_to 'Show', abonado %></td>
+    <td><%= link_to 'Edit', edit_abonado_path(abonado) %></td>
+    <td><%= link_to 'Destroy', abonado, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Abonado', new_abonado_path %>

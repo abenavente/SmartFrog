@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  campaing: 
+  registros: 1
+  fecha_carga: 2012-02-24
+
+two:
+  name: MyString
+  campaing: 
+  registros: 1
+  fecha_carga: 2012-02-24

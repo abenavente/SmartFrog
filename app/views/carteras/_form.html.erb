@@ -1,0 +1,33 @@
+<%= form_for(@cartera) do |f| %>
+  <% if @cartera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cartera.errors.count, "error") %> prohibited this cartera from being saved:</h2>
+
+      <ul>
+      <% @cartera.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :campaing %><br />
+    <%= f.text_field :campaing %>
+  </div>
+  <div class="field">
+    <%= f.label :registros %><br />
+    <%= f.number_field :registros %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_carga %><br />
+    <%= f.date_select :fecha_carga %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

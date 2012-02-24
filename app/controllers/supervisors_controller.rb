@@ -1,6 +1,6 @@
 class SupervisorsController < ApplicationController
   before_filter :authenticate_administrador!, :except => [:panel]
-  before_filter :authenticate_supervisor!, :except => [:index]
+  before_filter :authenticate_supervisor!, :except => [:index, :new, :show ,:edit , :create ,:update ]
   
   # GET /supervisors
   # GET /supervisors.json
