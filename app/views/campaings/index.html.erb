@@ -1,0 +1,29 @@
+<h1>Listing campaings</h1>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>Name</th>
+    <th>Inicio</th>
+    <th>Fin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @campaings.each do |campaing| %>
+  <tr>
+    <td><%= campaing.service %></td>
+    <td><%= campaing.name %></td>
+    <td><%= campaing.inicio %></td>
+    <td><%= campaing.fin %></td>
+    <td><%= link_to 'Show', campaing %></td>
+    <td><%= link_to 'Edit', edit_campaing_path(campaing) %></td>
+    <td><%= link_to 'Destroy', campaing, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Campaing', new_campaing_path %>

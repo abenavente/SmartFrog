@@ -1,4 +1,4 @@
-<%= form_for(@supervisor) do |f| %>
+<%= simple_form_for(@supervisor) do |f| %>
   <% if @supervisor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@supervisor.errors.count, "error") %> prohibited this supervisor from being saved:</h2>
@@ -10,32 +10,13 @@
       </ul>
     </div>
   <% end %>
+<%= f.input :name, :label=> "Nombres : " %>
+<%= f.input :email, :label=> "Login : " %>
+<%= f.input :password, :label=> "Contrasenha : " %>
+<%= f.input :dni, :label=> "Dni : " %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :dni %><br />
-    <%= f.text_field :dni %>
-  </div>
-  <div class="field">
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
-  </div>
-  <div class="field">
-    <%= f.label :estado %><br />
-    <%= f.number_field :estado %>
-  </div>
-  <div class="field">
-    <%= f.label :encrypted_password %><br />
-    <%= f.text_field :encrypted_password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+   
+ <%= f.submit 'Aceptar' %>
+ 
 <% end %>

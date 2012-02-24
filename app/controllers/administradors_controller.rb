@@ -1,4 +1,5 @@
 class AdministradorsController < ApplicationController
+  before_filter :authenticate_administrador!
   # GET /administradors
   # GET /administradors.json
   def index

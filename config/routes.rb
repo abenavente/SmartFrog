@@ -1,10 +1,15 @@
 SmartFrog::Application.routes.draw do
   
+  resources :campaings
+
+  resources :services
+
 root :to => "vistasGenerales#index"
 match "panelAdministrador" => "administradors#panel"
 match "panelSupervisor" => "supervisors#panel"
 match "panelOperador" => "operadors#panel"
 match "panelValidador" => "validadors#panel"
+match "supervisorese" => "supervisors#index"
 
   devise_for :users
   devise_for :administradors

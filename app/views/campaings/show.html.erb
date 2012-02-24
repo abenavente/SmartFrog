@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Service:</b>
+  <%= @campaing.service %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @campaing.name %>
+</p>
+
+<p>
+  <b>Inicio:</b>
+  <%= @campaing.inicio %>
+</p>
+
+<p>
+  <b>Fin:</b>
+  <%= @campaing.fin %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaing_path(@campaing) %> |
+<%= link_to 'Back', campaings_path %>

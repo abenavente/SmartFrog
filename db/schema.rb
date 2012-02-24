@@ -11,24 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223200906) do
+ActiveRecord::Schema.define(:version => 20120224032109) do
 
   create_table "administradors", :force => true do |t|
     t.string   "name"
     t.string   "password"
     t.string   "dni"
     t.string   "login"
-    t.integer  "estado"             :default => 1
+    t.integer  "estado"
     t.string   "encrypted_password"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "email"
   end
 
+  create_table "campaings", :force => true do |t|
+    t.integer  "service_id"
+    t.string   "name"
+    t.date     "inicio"
+    t.date     "fin"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "campaings", ["service_id"], :name => "index_campaings_on_service_id"
+
   create_table "customers", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "status"       :default => 1
+    t.integer  "status"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -38,19 +49,28 @@ ActiveRecord::Schema.define(:version => 20120223200906) do
     t.string   "password"
     t.string   "dni"
     t.string   "login"
-    t.integer  "estado"     :default => 1
+    t.integer  "estado"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
     t.string   "email"
   end
 
+  create_table "services", :force => true do |t|
+    t.integer  "customer_id"
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "services", ["customer_id"], :name => "index_services_on_customer_id"
+
   create_table "supervisors", :force => true do |t|
     t.string   "name"
     t.string   "password"
     t.string   "dni"
     t.string   "login"
-    t.integer  "estado"               :default => 1
+    t.integer  "estado"
     t.string   "encrypted_password"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
@@ -80,7 +100,7 @@ ActiveRecord::Schema.define(:version => 20120223200906) do
     t.string   "password"
     t.string   "dni"
     t.string   "login"
-    t.integer  "estado"              :default => 1
+    t.integer  "estado"
     t.string   "encrypted_password"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false

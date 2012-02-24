@@ -1,0 +1,33 @@
+<%= form_for(@campaing) do |f| %>
+  <% if @campaing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@campaing.errors.count, "error") %> prohibited this campaing from being saved:</h2>
+
+      <ul>
+      <% @campaing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :service %><br />
+    <%= f.text_field :service %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br />
+    <%= f.date_select :inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fin %><br />
+    <%= f.date_select :fin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
